@@ -18,13 +18,13 @@ data "terraform_remote_state" "hcp_resources" {
   }
 }
 
-data "terraform_remote_state" "hcp_vault_manage" {
+data "terraform_remote_state" "hcp-vault-manage" {
   backend = "remote"
 
   config = {
     organization = var.tfc_org
     workspaces = {
-      name = "hcp-vault-manage"
+      name = "hcp-vault-manage-1"
     }
   }
 }
